@@ -2,9 +2,11 @@ import time
 import pandas as pd
 import numpy as np
 
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 
 def get_filters():
     """
@@ -13,7 +15,7 @@ def get_filters():
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) day - name of the day of weeek to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -27,6 +29,7 @@ def get_filters():
 
     print('-'*40)
     return city, month, day
+
 
 
 def load_data(city, month, day):
@@ -43,6 +46,7 @@ def load_data(city, month, day):
 
 
     return df
+
 
 
 def time_stats(df):
@@ -64,6 +68,7 @@ def time_stats(df):
     print('-'*40)
 
 
+
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -83,6 +88,7 @@ def station_stats(df):
     print('-'*40)
 
 
+
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -97,6 +103,7 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 
 def user_stats(df):
@@ -118,6 +125,7 @@ def user_stats(df):
     print('-'*40)
 
 
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -131,6 +139,7 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+
 
 
 if __name__ == "__main__":
